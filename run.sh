@@ -18,3 +18,4 @@ sudo sed -e "s/DocumentRoot \/var\/www\/html/DocumentRoot \/home\/$USERNAME\/htm
 sudo cp ~/000-default.conf /etc/apache2/sites-available/000-default.conf
 echo "Restarting apache2..."
 sudo service apache2 restart
+echo "sudo apt install php7.*-curl to install curl"

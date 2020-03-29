@@ -1,10 +1,9 @@
 #!/bin/bash -eu
 echo "Start configuration..."
-sudo su
-apt update
-apt upgrade -y
-apt install -y apache2 php php-cgi libapache2-mod-php php-common php-pear php-mbstring
-cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.orig
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y apache2 php php-cgi libapache2-mod-php php-common php-pear php-mbstring
+sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.orig
 exit
 USERNAME=$(whoami)
 cd ~/

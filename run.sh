@@ -2,7 +2,7 @@
 echo "Start configuration..."
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y apache2 php php-cgi libapache2-mod-php php-common php-pear php-mbstring
+sudo apt install -y apache2 php php-cgi libapache2-mod-php php-common php-pear php-mbstring php-curl
 sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.orig
 USERNAME=$(whoami)
 cd ~/
@@ -18,4 +18,3 @@ sudo sed -e "s/DocumentRoot \/var\/www\/html/DocumentRoot \/home\/$USERNAME\/htm
 sudo cp ~/000-default.conf /etc/apache2/sites-available/000-default.conf
 echo "Restarting apache2..."
 sudo service apache2 restart
-echo "sudo apt install php7.*-curl to install curl"

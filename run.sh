@@ -16,3 +16,5 @@ sudo cp ~/apache2_2.conf /etc/apache2/apache2.conf
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.orig
 sudo sed -e "s/DocumentRoot \/var\/www\/html/DocumentRoot \/home\/$USERNAME\/html/" /etc/apache2/sites-available/000-default.conf > ~/000-default.conf
 sudo cp ~/000-default.conf /etc/apache2/sites-available/000-default.conf
+echo "Restarting apache2..."
+sudo service apache2 restart

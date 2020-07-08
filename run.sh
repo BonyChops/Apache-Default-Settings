@@ -9,7 +9,7 @@ cd ~/
 set +e
 mkdir ~/html
 set -e
-sudo sed -e "s/<Directory \/var\/www>/<Directory \/home\/$USERNAME\/html>/"  /etc/apache2/apache2.conf.orig > ~/apache2.conf
+sudo sed -e "s/<Directory \/var\/www/<Directory \/home\/$USERNAME\/html/"  /etc/apache2/apache2.conf.orig > ~/apache2.conf
 sudo sed -e "s/Options Indexes FollowSymLinks/Options FollowSymLinks/"   ~/apache2.conf > ~/apache2_1.conf
 sudo sed -e "s/AllowOverride None/AllowOverride All/"   ~/apache2_1.conf > ~/apache2_2.conf
 sudo cp ~/apache2_2.conf /etc/apache2/apache2.conf
